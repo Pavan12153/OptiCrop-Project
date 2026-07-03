@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OptiCrop AI</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: #f4fff4;
+            margin:0;
+            padding:0;
+        }
+
+        .header{
+            background: linear-gradient(to right,#2e7d32,#66bb6a);
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        .container{
+            width:70%;
+            margin:auto;
+            margin-top:30px;
+        }
+
+        .card{
+            background:white;
+            padding:25px;
+            margin-bottom:30px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            color:#2e7d32;
+        }
+
+        label{
+            font-weight:bold;
+            display:block;
+            margin-top:15px;
+            margin-bottom:5px;
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            border-radius:8px;
+            border:1px solid #ccc;
+            font-size:16px;
+        }
+
+        button{
+            margin-top:20px;
+            width:100%;
+            padding:15px;
+            background:#2e7d32;
+            color:white;
+            border:none;
+            border-radius:10px;
+            font-size:18px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#1b5e20;
+        }
+
+        a{
+            text-decoration:none;
+            color:white;
+        }
+
+        .research-btn{
+            background:#1565c0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>🌱 OptiCrop AI 🌱</h1>
+    <h3>Smart Agricultural Production Optimization Engine</h3>
+</div>
+
+<div class="container">
+
+    <!-- Scenario 1 -->
+    <div class="card">
+        <h2>🌾 Smart Crop Recommendation</h2>
+
+        <form action="/predict" method="post">
+
+            <label>🧪 Nitrogen (N)</label>
+            <input type="number" name="N" required>
+
+            <label>🧪 Phosphorous (P)</label>
+            <input type="number" name="P" required>
+
+            <label>🧪 Potassium (K)</label>
+            <input type="number" name="K" required>
+
+            <label>🌡 Temperature (°C)</label>
+            <input type="number" step="0.1" name="temperature" required>
+
+            <label>💧 Humidity (%)</label>
+            <input type="number" step="0.1" name="humidity" required>
+
+            <label>⚗ Soil pH</label>
+            <input type="number" step="0.1" name="ph" required>
+
+            <label>🌧 Rainfall (mm)</label>
+            <input type="number" step="0.1" name="rainfall" required>
+
+            <button type="submit">
+                🌾 Analyze Crop Recommendation
+            </button>
+
+        </form>
+    </div>
+
+    <!-- Scenario 2 -->
+    <div class="card">
+        <h2>🌱  Crop Suitability Analysis</h2>
+
+        <form action="/suitability" method="post">
+
+            <label>🌾 Crop Name</label>
+            <input type="text" name="crop" required>
+
+            <label>🌡 Temperature (°C)</label>
+            <input type="number" step="0.1" name="temperature" required>
+
+            <label>💧 Humidity (%)</label>
+            <input type="number" step="0.1" name="humidity" required>
+
+            <label>⚗ Soil pH</label>
+            <input type="number" step="0.1" name="ph" required>
+
+            <label>🌧 Rainfall (mm)</label>
+            <input type="number" step="0.1" name="rainfall" required>
+
+            <button type="submit">
+                🌱 Check Suitability
+            </button>
+
+        </form>
+    </div>
+
+    <!-- Scenario 3 -->
+    <div class="card">
+        <h2>📊 - Agricultural Research Dashboard</h2>
+
+        <form action="/research">
+            <button class="research-btn">
+                📈 Open Research Dashboard
+            </button>
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

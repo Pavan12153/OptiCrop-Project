@@ -1,0 +1,8 @@
+
+<h1>SMART CROP RECOMMENDATION RESULT</h1>
+<h2>Recommended Crop: {{crop}}</h2>
+<p>Prediction Confidence: {{confidence}}%</p>
+<p>Expected Yield Potential: {{yield_potential}}</p>
+<h3>Reason:</h3>
+<ul>{% for r in reasons %}<li>✓ {{r}}</li>{% endfor %}</ul>
+<p><b>Suggested Action:</b> {{suggestion}}</p>
